@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}商品搜索{% endblock %}
+
+{% block body %}
+<div class="container">
+<section id="main">
+	<div class="content">
+        {% if msg %}
+        <div class="alert alert-danger" role="alert">
+            <strong>{{ msg }}</strong>
+        </div>
+        {% endif %}
+		<div class="pag-nav">
+			<ul class="p-list">
+				<li><a href="/">Home</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;商品搜索</li>
+			</ul>
+		</div>
+
+		<div class="coats">
+			<div class="coat-row">
+                {% for good in goods_info %}
+                  <div class="coat-column">
+					<a href="single?id={{ good.id }}">
+						<img src={{ good.photo_path }} class="img-responsive" alt="">
+						<div class="prod-desc"><h4>{{ good.name }}</h4><small>{{ good.price }}</small></div>
+					    <p></p>
+                    </a>
+					<div class="mask">
+                        <div class="info"><a href="single?id={{ good.id }}">查看</a></div>
+                    </div>
+				</div>
+                {% endfor %}
+                <div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+{% endblock %}

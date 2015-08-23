@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}登录{% endblock %}
+
+{% block body %}
+    <div class="container">
+<section id="main">
+	<div class="content">
+        {% if msg %}
+        <div class="alert alert-danger" role="alert">
+            <strong>{{ msg }}</strong>
+        </div>
+        {% endif %}
+		<div class="pag-nav">
+			<ul class="p-list">
+				<li><a href="/">Home</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;登录</li>
+			</ul>
+		</div>
+		<div class="coats">
+			<h3 class="c-head">登录</h3>
+			<p>登录一下，开启购物之旅！</p>
+		</div>
+        <form method="post" action="/login" class="form">
+		<div class="contact-box login-box">
+			<div class="form">
+				<small>邮箱</small>
+				<div class="text">
+					<input type="text" name="email" class="form-control" />
+				</div>
+			</div>
+			<div class="form">
+				<small>密码</small>
+				<div class="text">
+					<input type="password" name="passwd" class="form-control" />
+				</div>
+			</div>
+			<div class="text">
+				<input type="submit" value="登录" />
+			</div>
+        </div>
+        </form>
+
+			<div class="text">
+				<a href="#">忘记密码</a>
+			</div>
+		<div class="coats login-bot">
+			<h3 class="c-head">新用户</h3>
+			<p>听说，注册成功之后有惊喜哦！</p>
+			<div class="reg">
+				<a href="register">
+					注册
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+    </div>
+{% endblock %}

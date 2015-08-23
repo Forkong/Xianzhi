@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="zh-CN" profile="http://gmpg.org/xfn/11">
+{% block meta %}
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/static/js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="/static/css/style.css" rel='stylesheet' type='text/css' media="all" />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Google Fonts -->
+<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/static/css/sticky-navigation.css" />
+<link href="/static/css/demo.css" rel="stylesheet" type="text/css" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<link rel="stylesheet" href="/static/css/demo1.css" />
+<link rel="stylesheet" href="/static/css/imagezoom.css" />
+<link rel="stylesheet" href="/static/css/es-cus.css" />
+<script src="/static/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery.imagezoom.min.js"></script>
+<script type="text/javascript" src="/static/js/modernizr.custom.17475.js"></script>
+<script type="text/javascript" src="/static/js/jquery.elastislide.js"></script>
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('$(7(){$(\'#1d\').j();9 a=$(\'#12\').A({B:0,z:3,C:7(c,d,e){c.E().D("8");c.k("8");a.y(d);e.x();9 f=$(\'#16\').g(\'m\');f.K(c.l(\'i\').M(\'G\'),c.l(\'i\').g(\'L\'))},H:7(){$(\'#16\').j({t:\'u/v/3.p\'});$(\'#12 J:F(0)\').k(\'8\')}});$(\'#W\').j({w:\'X\',17:[o,s],t:\'u/v/6.p\',15:[10,-4],r:\'13\'});9 b=$(\'#W\').g(\'m\');$(n).N(7(){h=$(n).U();S(h>R){b.q(o,s)}T{b.q(h*0.4,h*0.4*0.14)}});9 a=$(\'#O\').A({B:1,z:4,C:7(c,d,e){c.E().D("8");c.k("8");a.y(d);e.x();9 f=$(\'#I\').g(\'m\');f.K(c.l(\'i\').M(\'G\'),c.l(\'i\').g(\'L\'))},H:7(){$(\'#I\').j({w:\'X\',17:[o,s],t:\'u/v/2.p\',15:[10,-4],r:\'13\',1a:7(c){c.$Q.1b().19(P)},18:7(c){c.$Q.1f().1e(P)}});$(\'#O J:F(1)\').k(\'8\');$(n).N(7(){9 c=$(\'#I\').g(\'m\');h=$(n).U();S(h>R){c.q(o,s)}T{c.q(h*0.4,h*0.4*0.14)}})}});$(\'#1c\').j({w:\'Y\',r:\'11\'});9 a=$(\'#Z\').A({B:0,z:4,C:7(c,d,e){c.E().D("8");c.k("8");a.y(d);e.x();9 f=$(\'#V\').g(\'m\');f.K(c.l(\'i\').M(\'G\'),c.l(\'i\').g(\'L\'))},H:7(){$(\'#V\').j({w:\'Y\',t:\'u/v/5.p\',r:\'11\'});$(\'#Z J:F(0)\').k(\'8\')}})});',62,78,'|||||||function|active|var|||||||data|winWidth|img|ImageZoom|addClass|find|imagezoom|window|480|jpg|changeZoomSize|zoomViewerClass|300|bigImageSrc|demo_assets|large|type|preventDefault|setCurrent|minItems|elastislide|start|onClick|removeClass|siblings|eq|src|onReady|demo4|li|changeImage|largeimg|attr|resize|demo4carousel|500|viewer|900|if|else|width|demo6|demo3|standard|follow|demo2carousel||followViewer|demo2carousel|standardViewer|625|offset|demo2|zoomSize|onHide|fadeIn|onShow|hide|demo5|demo1|fadeOut|show'.split('|'),0,{}))
+</script>
+
+<script>
+$(function() {
+
+	// grab the initial top offset of the navigation
+	var sticky_navigation_offset_top = $('#sticky_navigation').offset().top;
+
+	// our function that decides weather the navigation bar should have "fixed" css position or not.
+	var sticky_navigation = function(){
+		var scroll_top = $(window).scrollTop(); // our current vertical position from the top
+
+		// if we've scrolled more than the navigation, change its position to fixed to stick to top, otherwise change it back to relative
+		if (scroll_top > sticky_navigation_offset_top) {
+			$('#sticky_navigation').css({ 'position': 'fixed', 'top':0, 'left':0 });
+		} else {
+			$('#sticky_navigation').css({ 'position': 'relative' });
+		}
+	};
+
+	// run our function on load
+	sticky_navigation();
+
+	// and run it again every time you scroll
+	$(window).scroll(function() {
+		 sticky_navigation();
+	});
+
+	// NOT required:
+	// for this demo disable all links that point to "#"
+	$('a[href="#"]').click(function(event){
+		event.preventDefault();
+	});
+
+});
+</script>
+{% endblock %}
+</head>
+<title>闲置物品交易网 - {% block title %}{% endblock %}</title>
+<body>
+	<!-- Header Part Starts Here -->
+<div class="header">
+	<div class="container">
+	<div id="demo_top_wrapper">
+	<div id="sticky_navigation_wrapper">
+		<div id="sticky_navigation">
+			<div class="demo_container navigation-bar">
+				<div class="navigation">
+					<div class="logo"><a href="/">首页</a></div>
+					<span class="menu"></span>
+					<script>
+						$( "span.menu" ).click(function() {
+						  $( ".navig" ).slideToggle( "slow", function() {
+						    // Animation complete.
+						  });
+						});
+					</script>
+					<div class="navig">
+						<ul>
+							<li><a href="women">女士</a></li>
+							<li><a href="men">男士</a></li>
+{#							<li><a href="about">关于</a></li>#}
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="navigation-right">
+					<ul class="user">
+						<li>
+                            {% if request.session.islogin %}
+                                <span></span><a href="mygoods">{{ request.session.user_info.name }}</a>
+                                <span class="bascket"></span><a href="logout">退出</a>
+                            {% else %}
+                                <span></span><a href="login">登录</a>
+                            {% endif %}
+						</li>
+						<li>
+							<button class="search"></button>
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+				<div class="serch">
+					<form method="post" action="/singlesearch">
+						<span>
+							<input type="text" name="search_name" placeholder="搜索" required="">
+							<input type="submit" value="" />
+						</span>
+					</form>
+				</div>
+				<script>
+					$( "button.search" ).click(function() {
+					  $( ".serch" ).slideToggle( "slow", function() {
+					    // Animation complete.
+					  });
+					});
+				</script>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+    {% block body %}
+
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}注册{% endblock %}
+
+{% block body %}
+    <div class="container">
+<section id="main">
+	<div class="content">
+    {% if msg %}
+        <div class="alert alert-danger" role="alert">
+            <strong>{{ msg }}</strong>
+        </div>
+    {% endif %}
+		<div class="pag-nav">
+			<ul class="p-list">
+				<li><a href="/">Home</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;注册</li>
+			</ul>
+		</div>
+		<div class="coats">
+			<h3 class="c-head">注册</h3>
+			<p>听说，注册成功之后有惊喜哦！</p>
+		</div>
+		<div class="register">
+	  	  <form method="post" action="/register" class="form">
+			 <div class="register-top-grid">
+				<h3>个人信息</h3>
+				 <div>
+					<span>账号<label>*</label></span>
+                     <input type="text" name="name" class="form-control">
+				 </div>
+				 <div>
+					 <span>邮箱<label>*</label></span>
+					 <input type="text" name="email" class="form-control">
+				 </div>
+				 <div class="clearfix"> </div>
+                 <a class="news-letter" href="#"></a>
+				 </div>
+			     <div class="register-bottom-grid">
+					    <h3>登录信息</h3>
+						 <div>
+							<span>密码<label>*</label></span>
+							<input type="password" name="passwd" class="form-control">
+						 </div>
+						 <div>
+							<span>确认密码<label>*</label></span>
+							<input type="password" name="repasswd" class="form-control">
+						 </div>
+				 </div>
+
+              <button type="submit" class="btn btn-large btn-success" >提交</button>
+			</form>
+	   </div>
+	</div>
+</section>
+    </div>
+{% endblock %}

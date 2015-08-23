@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}添加商品{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <section id="main">
+	<div class="content">
+        {% if msg %}
+        <div class="alert alert-danger" role="alert">
+            <strong>{{ msg }}</strong>
+        </div>
+        {% endif %}
+		<div class="pag-nav">
+			<ul class="p-list">
+				<li><a href="/">Home</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;添加商品</li>
+			</ul>
+		</div>
+
+        <form method="post" action="/singleadd" class="form" enctype="multipart/form-data">
+		<div class="contact-box login-box">
+            <div class="form">
+				<small>图片</small>
+				<div class="text">
+                  <input type="file" name="photo" class="form-control" />
+				</div>
+			</div>
+			<div class="form">
+				<small>名称</small>
+				<div class="text">
+                    <input type="text" name="name" class="form-control" />
+				</div>
+			</div>
+            <div class="form">
+				<small>价格</small>
+				<div class="text">
+					<input type="text" name="price" class="form-control" />
+				</div>
+			</div>
+            <div class="form">
+				<small>联系电话</small>
+				<div class="text">
+					<input type="text" name="phone" class="form-control" />
+				</div>
+			</div>
+            <div class="form">
+				<small>描述</small>
+				<div class="text">
+					<input type="text" name="description" class="form-control" />
+                </div>
+                <div class="text">
+                  <input type="hidden" name="id" value="{{ single_info.id }}" class="form-control">
+                </div>
+			</div>
+
+            <small>类别</small>
+            <div class="form">
+            <label>
+                <input type="radio" name="tag" id="type" value="1" checked>
+                男士
+            </label>
+            </div>
+            <div class="form">
+            <label>
+                <input type="radio" name="tag" id="type" value="0">
+                女士
+            </label>
+            </div>
+
+			<div class="text">
+				<input type="submit" value="添加" />
+			</div>
+        </div>
+        </form>
+	</div>
+    </section>
+</div>
+{% endblock %}
+

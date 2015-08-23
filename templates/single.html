@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}商品详情{% endblock %}
+
+{% block body %}
+    <div class="container">
+    <section id="main">
+	<div class="content">
+        {% if msg %}
+        <div class="alert alert-danger" role="alert">
+            <strong>{{ msg }}</strong>
+        </div>
+        {% endif %}
+		<div class="pag-nav">
+			<ul class="p-list">
+				<li><a href="/">Home</a></li> &nbsp;&nbsp;/&nbsp;
+				<li class="act">&nbsp;商品详情</li>
+			</ul>
+		</div>
+		<div class="page" >
+            <span class="demowrap"><img id="demo2" src={{ single_info.photo_path }}  /></span>
+			<div class="clearfix"></div>
+		</div>
+		<div class="coats sing-c">
+			<h3 class="c-head">{{ single_info.name }}</h3>
+            <p>售价: ￥{{ single_info.price }}</p>
+			<p class="article">编号: {{ single_info.id }}</p>
+			<p class="article">{{ single_info.uid.name }} 于 {{ single_info.create_date }} 发布</p>
+			<p class="article">联系电话: {{ single_info.phone }}</p>
+			<p class="art">{{ single_info.description }} </p>
+		</div>
+
+        {% if is_can_config %}
+            <form method="post" action="/single_config" class="form">
+		<div class="contact-box login-box">
+			<div class="form">
+				<div class="text">
+					<input type="hidden" name="id" value="{{ single_info.id }}" class="form-control" />
+				</div>
+			</div>
+			<div class="text">
+				<input type="submit" value="修改" />
+			</div>
+        </div>
+        </form>
+
+            <form method="post" action="/singledelete" class="form">
+		<div class="contact-box login-box">
+			<div class="form">
+				<div class="text">
+					<input type="hidden" name="id" value="{{ single_info.id }}" class="form-control" />
+				</div>
+			</div>
+			<div class="text">
+				<input type="submit" value="删除" />
+			</div>
+        </div>
+        </form>
+        {% endif %}
+	</div>
+    </section>
+</div>
+{% endblock %}

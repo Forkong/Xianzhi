@@ -1,0 +1,33 @@
+python manage.py runserver 8080
+更改服务器端口号
+
+python manage.py shell
+启动交互界面
+
+python manage.py startapp books
+创建一个app，名为books
+
+python manage.py validate
+验证Django数据模型代码是否有错误
+
+python manage.py sqlall books
+为模型产生sql代码
+
+python manage.py syncdb
+运行sql语句，创建模型相应的Table
+
+python manage.py dbshell
+启动数据库的命令行工具
+
+python manage.py sqlall books
+查看books这个app下所有的表
+
+python manage.py syncdb
+同步数据库,生成管理界面使用的额外的数据库表
+
+python manage.py makemigrations
+python manage.py migrate
+
+
+
+
