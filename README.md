@@ -1,10 +1,12 @@
-### 演示地址: [xianzhi.ifujun.com](xianzhi.ifujun.com)
+### 演示地址: [xianzhi.ifujun.com](http://xianzhi.ifujun.com)
 
 这是我初学Django时写的一个demo,取个名字，叫“闲置”，此为练手之作，只能供新手学习，不能用于生产环境。
 
 
 **Require: **
+
 **Django \>=1.8.0**
+
 **Mysql**
 
 
