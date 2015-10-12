@@ -6,9 +6,11 @@
 **Django \>=1.8.0**
 **Mysql**
 
+
 数据库配置修改位置：
 **Xianzhi/Xianzhi/settings.py**
 修改下方的数据库名称、用户名、密码、Host和端口号
+
 	DATABASES = {
 	    'default': {
 	        'ENGINE': 'django.db.backends.mysql',
